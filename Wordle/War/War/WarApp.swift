@@ -1,0 +1,17 @@
+//
+//  WarApp.swift
+//  War
+//
+//  Created by Pothapragada, Krishna N on 2/23/26.
+//
+
+import SwiftUI
+
+@main
+struct WarApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}

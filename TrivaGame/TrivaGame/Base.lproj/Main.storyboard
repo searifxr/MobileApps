@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A7W-vv-pjC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SetUp Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="SetUp Controller" customClass="SetupViewController" customModule="TrivaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZbD-vD-cbu">
+                                <rect key="frame" x="0.0" y="156" width="393" height="281"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p9q-Kt-L9o">
+                                <rect key="frame" x="76" y="517" width="241" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Local"/>
+                                    <segment title="Still in the works"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82L-i2-5Dh">
+                                <rect key="frame" x="143" y="628" width="108" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start game"/>
+                                <connections>
+                                    <action selector="startGameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T8M-RH-CDJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Game" image="rectangle.portrait.and.arrow.right.fill" catalog="system" landscapeImage="rectangle.portrait.and.arrow.forward.fill" id="0al-6o-Jal"/>
+                    <connections>
+                        <outlet property="pickerView" destination="ZbD-vD-cbu" id="jVV-A1-bzD"/>
+                        <outlet property="sourceSegmentedControl" destination="p9q-Kt-L9o" id="SIu-db-lP3"/>
+                        <outlet property="startButton" destination="82L-i2-5Dh" id="HIq-Zb-9rb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951.90839694656484" y="-201.40845070422537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2S1-bw-g6v">
+            <objects>
+                <viewController id="sYu-Zb-1gN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSV-8g-jOj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Bn-qt-ji1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dEe-bR-bdj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWb-HZ-SCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="111"/>
+        </scene>
+        <!--Start Screen-->
+        <scene sceneID="tsi-ph-qTJ">
+            <objects>
+                <viewController id="snK-Pc-HZr" customClass="QuestionsViewController" customModule="TrivaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uUT-2n-bGI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O8H-20-RcG">
+                                <rect key="frame" x="121" y="61" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1t-Gh-OXL">
+                                <rect key="frame" x="71" y="318" width="276" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="choiceTapped:" destination="snK-Pc-HZr" eventType="touchUpInside" id="IFj-eu-cop"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-IZ-cyf">
+                                <rect key="frame" x="71" y="532" width="276" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="choiceTapped:" destination="snK-Pc-HZr" eventType="touchUpInside" id="DR5-jm-yTS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g85-dI-GYa">
+                                <rect key="frame" x="71" y="642" width="276" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="choiceTapped:" destination="snK-Pc-HZr" eventType="touchUpInside" id="SXO-Jz-cSn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGS-DJ-Hl4">
+                                <rect key="frame" x="56" y="118" width="303" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85z-XT-Wbr">
+                                <rect key="frame" x="71" y="428" width="276" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="choiceTapped:" destination="snK-Pc-HZr" eventType="touchUpInside" id="Gg6-sh-fKZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZOI-Pk-pxo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Start Screen" image="square.and.arrow.up" catalog="system" id="xAi-Vz-vJv"/>
+                    <navigationItem key="navigationItem" id="fyr-gh-Fmg"/>
+                    <connections>
+                        <outlet property="Progress" destination="O8H-20-RcG" id="JwI-J1-bOf"/>
+                        <outlet property="Question" destination="zGS-DJ-Hl4" id="14p-Lo-M2S"/>
+                        <outletCollection property="Choices" destination="f1t-Gh-OXL" collectionClass="NSMutableArray" id="idb-21-abC"/>
+                        <outletCollection property="Choices" destination="85z-XT-Wbr" collectionClass="NSMutableArray" id="7WV-az-UOP"/>
+                        <outletCollection property="Choices" destination="rEp-IZ-cyf" collectionClass="NSMutableArray" id="Gyd-bk-GSj"/>
+                        <outletCollection property="Choices" destination="g85-dI-GYa" collectionClass="NSMutableArray" id="a2A-su-Gu7"/>
+                        <segue destination="sYu-Zb-1gN" kind="show" id="hLJ-tQ-qpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xw0-es-eTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951.90839694656484" y="526.76056338028172"/>
+        </scene>
+        <!--Game Tab Bar Controller-->
+        <scene sceneID="SEo-4Z-g3n">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A7W-vv-pjC" customClass="GameTabBarController" customModule="TrivaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gJC-7q-gPv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w1b-El-RmN"/>
+                        <segue destination="snK-Pc-HZr" kind="relationship" relationship="viewControllers" id="PkH-dQ-Cn7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhx-lo-onG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rectangle.portrait.and.arrow.forward.fill" catalog="system" width="128" height="109"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="109"/>
+        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
